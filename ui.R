@@ -17,13 +17,15 @@ ui <- fluidPage(titlePanel("BC Store prices",windowTitle = "BC Store Prices"),
                                  selectInput("countryInput", "Select Country",
                                              choices = c("CANADA", "FRANCE", "ITALY"))),
                     
+                    
                     mainPanel(
                         tabsetPanel(type = "tabs",
-                                    tabPanel("Plot",plotOutput("coolplot")),
-                                    tabPanel("Table",tableOutput("results")),
                                     tabPanel("Documentation",verbatimTextOutput("documentation"))
-                        )
-                    )                                
+                                    ,
+                                    tabPanel("Plot",plotOutput("coolplot")),
+                                    tabPanel("Table",tableOutput("results"))
+                                    
+                        )                     )           
                     ###                    mainPanel(h4("Interactive Charts Panel"),
                     ###                              br(),br(),plotOutput("coolplot"),
                     ###                              br(),br(),tableOutput("results"))
